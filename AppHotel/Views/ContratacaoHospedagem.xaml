@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppHotel.MainPage"
+             x:Class="AppHotel.Views.ContratacaoHospedagem"
              Title="ContatacoHospedagem"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="{StaticResourse=Gray100}">
+             BackgroundColor="{StaticResource Gray100}">
 
-    <VerticalStackLayout VerticalOptions="CenterAndExpand" padding="10" Spacing="10">
+    <VerticalStackLayout VerticalOptions="CenterAndExpand" Padding="10" Spacing="10">
         <Label Text="Cáculo Da Diaria"
                FontFamily="Kalam"
                FontSize="50"
@@ -32,7 +32,7 @@
                     <VerticalStackLayout>
                         <Label Text="Escolha sua Suite" TextTransform="Uppercase" 
                                    FontSize="Subtitle" TextColor="{StaticResource Primary}"/>
-                        <Label x:Name="pck_quarto" Title="Selecione sua Acomodação" ItwmDispalyBinding="{Binding Descricao}"/>
+                        <Picker x:Name="pck_quarto" Title="Selecione sua Acomodação" Item="{Binding Descricao}"/>
                     </VerticalStackLayout>
                 </Frame>
                 <Frame Padding="10" Margin="10">
@@ -52,6 +52,7 @@
                         
                     </VerticalStackLayout>
                 </Frame>
+                <Button Text="Avançar" Clicked=""/>
             </VerticalStackLayout>
         </Frame>
     </VerticalStackLayout>
